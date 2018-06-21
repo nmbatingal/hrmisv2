@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Auth;
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -47,7 +48,6 @@ class LoginController extends Controller
     public function username()
     {
         return 'username';
-        // return 'u_username';
     }
 
     /**
@@ -69,6 +69,5 @@ class LoginController extends Controller
     protected function credentials(Request $request)
     {
         return array_merge($request->only($this->username(), 'password'), ['_isActive' => 1]);
-        // return array_merge($request->only($this->username(), 'u_password'), ['u_active' => 1]);
     }
 }

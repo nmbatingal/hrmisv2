@@ -98,6 +98,6 @@ class RegisterController extends Controller
 
         event(new Registered($user = $this->create($request->all())));
 
-        return redirect('/login')->with('info', 'Confirm user credentials to the <strong>system administrator</strong> first before using your account.');
+        return redirect('/login')->with('status', 'Confirm user credentials to the <strong>system administrator</strong> first before using your account.');
     }
 }

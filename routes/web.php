@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/applicants', 'Applicants\ApplicantsController');
+Route::resource('/positions', 'PositionVacancy\PositionsController');

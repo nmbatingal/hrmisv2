@@ -3,6 +3,7 @@
 namespace App;
 
 use Webpatser\Uuid\Uuid;
+
 trait Uuids
 {
 
